@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # precisei instalar sudo apt-get install python3-tk e openpyxl
 # PROBLEMAS:
-#           1-ALGORÍTMO GENÉTICO
+#           1-ALGORÝTMO GENÉTICO
 
 #import scipy.optimize as solver
 import pandas as pd
@@ -92,7 +92,7 @@ figura.show()
 figura = px.line(x=datas, y=dataset['soma valor'], title='Evolução do patrimônio')
 figura.show()
 
-# +++++++++++++++++++++++++++++++++++++++++++++++ ( ANÁLISE ESTATÍSTICA PERÍODO ) ++++++++++++++++++++++++++++++++++++ #
+# +++++++++++++++++++++++++++++++++++++++++++++++ ( ANÝLISE ESTATÝSTICA PERÝODO ) ++++++++++++++++++++++++++++++++++++ #
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 print('Retorno Acumulado no Período: ',  dataset.loc[len(dataset) - 1]['soma valor'] / dataset.loc[0]['soma valor'] - 1)
 print('Desvio Padrão: ', dataset['taxa retorno'].std())
@@ -133,8 +133,8 @@ print('Valor em 2020: R$%0.2f' % valor_2020)
 print('Valor em 2021: R$%0.2f' % valor_2021)
 print('Lucro Bruto investimento: R$%0.2f' % rendimento)
 print('Total de imposto pago R$%0.2f' % ir)
-print('Total Líquido investimento: R$%0.2f' % totalLiquido)
-print('Lucro Líquido investimento: R$%0.2f' % lucroLiquido)
+print('Total Liquido investimento: R$%0.2f' % totalLiquido)
+print('Lucro Liquido investimento: R$%0.2f' % lucroLiquido)
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 print('Taxa Selic média ultimos 7 anos %0.2f' % taxa_selic_historico.mean(), '%')
 print('Sharp Ratio sem considerar Renda Fixa: ',  (dataset['taxa retorno'].mean() / dataset['taxa retorno'].std()) * np.sqrt(246))
@@ -217,7 +217,7 @@ print('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 print('Melhor Retorno: ', melhor_retorno, '%')
 print('Melhor Volatilidade: ', melhor_volatilidade, '%')
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-# ++++++++++++++++++++++++++++++++++++++++++++++++ ( PLOTAR GRÁFICO BONITINHO AI ) ++++++++++++++++++++++++++++++++++ #
+# ++++++++++++++++++++++++++++++++++++++++++++++++ ( PLOTAR GRÝFICO BONITINHO AI ) ++++++++++++++++++++++++++++++++++ #
 
 fig.figure(figsize=(10, 8))
 fig.scatter(ls_volatilidade, ls_retorno, c=ls_sharpe_ratio)
