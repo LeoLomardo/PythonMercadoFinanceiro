@@ -21,7 +21,7 @@ inicio = dt.datetime(2015, 1, 1)
 fim = dt.datetime(2022, 7, 7)
 list = ['BBAS3.SA', 'BBDC4.SA', 'ITUB4.SA', 'SANB11.SA', 'ABCB4.SA', 'BPAC11.SA', 'BPAN4.SA']
 df = web.DataReader(list, 'yahoo', inicio, fim)['Adj Close']
-writer = pd.ExcelWriter('aula1.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter('dados.xlsx', engine='xlsxwriter')
 df.to_excel(writer, sheet_name='Sheet1')
 writer.save()
 
