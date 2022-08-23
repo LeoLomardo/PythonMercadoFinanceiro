@@ -1,4 +1,3 @@
-import pickle
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -20,7 +19,7 @@ pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 print(dataset.shape)
 
-dataset.drop(['Número de Empregados', 'CAGR RECEITAS 5 ANOS', 'CAGR LUCROS 5 ANOS', 'CÓDIGO', 'PATRIMONIO / ATIVOS', 'Valor da Empresa (Trim)'], axis=1, inplace=True)  # retira dados iniciais
+dataset.drop(['Número de Empregados','Número de Acionistas', 'CAGR RECEITAS 5 ANOS', 'CAGR LUCROS 5 ANOS', 'CÓDIGO', 'PATRIMONIO / ATIVOS', 'Valor da Empresa (Trim)'], axis=1, inplace=True)
 print(dataset.isnull().sum())  # aqui ele mostra quandos valores faltantes tem de cada coluna
 dataset['Número de Acionistas'].fillna(dataset['Número de Acionistas'].mean(), inplace=True)  # preenche o resto dos valores faltantes com a media dos valores da coluna
 dataset['DY'].fillna(0, inplace=True)  # preenche o resto dos valores faltantes com a media dos valores da coluna
@@ -156,7 +155,7 @@ with open('base_definitiva.pkl', 'wb') as f:
 
 parametros = {'criterion': ['gini', 'entropy'], 'min_samples_split': [2, 4, 6], 'n_estimators': [50, 100, 150]}
 
-grid_search = GridSearchCV(estimator = RandomForestClassifier(), param_grid = parametros)
+grid_search = GridSearchCV(estimator=RandomForestClassifier(), param_grid=parametros)
 grid_search.fit(X, y)
 best_params = grid_search.best_params_
 best_score = grid_search.best_score_
