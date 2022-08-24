@@ -14,7 +14,7 @@ from sklearn.decomposition import PCA
 from sklearn.model_selection import GridSearchCV
 import pickle
 
-dataset = pd.read_excel('Dados.xlsx')
+dataset = pd.read_excel('dados.xlsx')
 pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 print(dataset.shape)
