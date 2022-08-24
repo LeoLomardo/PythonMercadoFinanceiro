@@ -15,7 +15,7 @@ df = web.DataReader(list, 'yahoo', dia0, fim)['Adj Close']
 writer = pd.ExcelWriter('aula3.xlsx', engine='xlsxwriter')
 df.to_excel(writer, sheet_name='Sheet1')
 writer.save()
-dataset = pd.read_excel('aula3.xlsx', sheet_name='Sheet1')
+dataset = pd.read_excel('dados.xlsx', sheet_name='Sheet1')
 
 
 # ++++++++++++++++++++++++++ ( SIMULACAO DE MONTE CARLO ) ++++++++++++++++++++++++++++ #
